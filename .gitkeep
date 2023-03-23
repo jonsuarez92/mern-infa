@@ -1,0 +1,24 @@
+notes for code week 18 day 1
+
+when creating a app you run npm run build
+
+Build folder is the ready for the browser code
+
+After building, examining our project's structure reveals a new BUILD 
+folder containing production ready static assets including index.html, 
+static/css & static/js folders, etc. If this React app was a frontend 
+only app, the assets in the build folder would be ready to be deployed to any static hosting service.
+This build folder of production-ready goodness is ready to be served up by an Express backend...
+
+Code the Skeleton Express App
+
+npm i express morgan serve-favicon
+
+Then we will create server.js file for Skeleton Express App....
+
+The -D is letting it be known that the dependency is only nessary for devlopment enviroment.
+then add npm i -D nodemon
+
+then goto package.json and add "dev": "nodemon server" in the script.
+
+Now you can run backend by running npm run dev.
