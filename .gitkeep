@@ -1,4 +1,4 @@
-notes for code week 18 day 1
+1. notes for code week 18 day 1 video 02:04:00
 
 when creating a app you run npm run build
 
@@ -22,3 +22,62 @@ then add npm i -D nodemon
 then goto package.json and add "dev": "nodemon server" in the script.
 
 Now you can run backend by running npm run dev.
+
+2. notes for code week 18 day 2 start video 01:29:00
+
+create proxy in package.json at top level anywhere in the main part of the package. so anything happening on 3001 we're going to make it so that port 3000 will see things that run on port 3001 as itself. anything ran on 3001 port 3000 will also say thats also me.
+
+"proxy": "http://localhost:3001"
+
+Then 
+Use the useStatehook to define a state variable named user!
+Initialize user to null!
+The setter function should be named according to convention!
+Hint: Don't forget to add the necessary import! shown below ex.
+
+import {useState} from 'react'
+
+const [user, setUser] = useState(null)
+
+Then Add Skeleton Page-Level Components in src folder. like AuthPage, NewOrderPage, and OrderHistorPage, then add the files.
+
+. Conditionally Render Based On the userState
+
+Then Switch the wrapper div in App for main, and remove all of its children… then add the below code.
+
+import AuthPage from '../AuthPage/AuthPage';
+import NewOrderPage from './pages/NewOrderPage/NewOrderPage'; 
+
+then do a turn 
+{user ?
+        <NewOrderPage />
+        :
+        <AuthPage />
+      }
+
+ if u see auth page it beacsue there a false value in the useState(null) <AuthPage />, if it was useState(1) or any truthy value you will see the  <NewOrderPage />   
+
+//Since it's a third-party library, React Router must be installed:
+
+npm i react-router-dom
+
+The <BrowserRouter>Component
+<BrowserRouter>is the top-level React Router component that makes React Router work.
+
+import { BrowserRouter as Router } from 'react-router-dom';
+
+then in App.js add this:
+ import { Routes, Route } from'react-router-dom'
+then wrap Routes within the Route with pages,with the path and elemets when the path is clicked the element tells you what page is displayed show below.
+
+ <Routes>
+          <Route path='/orders/new' element={<NewOrderPage />} />
+          <Route path='/orders' element={<OrderHistoryPage />} />
+</Routes>
+
+3. week 19 day 1 review 02:47:20
+
+4. week 19 day 2 
+
+
+

@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './pages/App/App';
 import reportWebVitals from './reportWebVitals';
+// week 18 day 2 after running npm i react-router-dom you can add the broswerRouter 
+/*we wrap browserRouter because under the hood is uses the react context api 
+ context api = gives components that is a child of router access to the state in router
+ without having to pass it down as props you will see in the console BrowserRouter */
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router> <App /></Router>
   </React.StrictMode>
 );
 
