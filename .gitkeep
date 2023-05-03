@@ -77,7 +77,60 @@ then wrap Routes within the Route with pages,with the path and elemets when the 
 
 3. week 19 day 1 review 02:47:20
 
-4. week 19 day 2 
+# showed how to clone and create a branch to fix  code so it can be added to the main branch with fix code.
 
+# what is babel!!!
 
+# code sandbox review using classes 03:38:00
+https://codesandbox.io/s/arthir-react-btn-with-class-and-state-z2wy6l
 
+# to understand props look at this 
+https://codesandbox.io/s/learning-state-and-hooks-1wfix2?file=/src/components/Counter.js
+
+4. week 19 day 2 start 00:25:00
+
+1. Add Folders to Organize the Express Server Code.
+
+# mkdir config routes models controllers
+1. above folders to organize the Express server-side code
+
+2. for notes for backend check .gitkeep for the above folders
+
+Implement dotenvMiddleware and Create a .env File
+As we've done in the past, we need a way to access environment variables and secrets.
+
+We're going to use the familiar dotenvmiddleware and .env file we used used in Unit 2 and is common in most Express apps.
+
+install below
+# npm i dotenv
+
+// week 19 day 2 01:00:00 Always require and configure near the top in server.js file
+require('dotenv').config();
+
+in .gitignore file add .env so when u push to git hub it does push the .env file.the create .env file 
+
+# .env is for secrets 
+
+# install mongooseand Connect to a Database
+1. Mongoose interact with a MongoDB database.
+
+Mongoose is also the go to in MERN-Stack apps.
+
+2. First, we need to install it as usual shown below:
+
+# npm i mongoose
+
+3. then add database.js to config folder then put mongoose coonection there
+
+4. then add you mongoose database to .env
+
+# server.js add this under 
+require('./config/database'); the 
+require('dotenv').config();
+
+ show in server.js require('dotenv').config() is how we access our
+./config/database file to connect to mongoose in our server.  
+
+# stopped at 01:50:56
+
+# setting up src folder with components to signup with classe's and the setting up login with use state.

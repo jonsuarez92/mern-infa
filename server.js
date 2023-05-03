@@ -1,4 +1,11 @@
-//18 day 1
+// week 19 day 2 01:00:00 Always require and configure near the top
+/* require('dotenv').config() is how we access our
+./config/database file to connect to mongoose in our server.  */
+require('dotenv').config();//////
+// Connect to the database//////
+require('./config/database');///
+///////////////////////////////
+//18 day 1 //basic express template 
 const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
@@ -33,6 +40,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests
+//index.html is where the react APP is inside the script tag!!
 app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
